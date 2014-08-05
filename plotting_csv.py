@@ -3,7 +3,7 @@ __author__ = 'Jormak'
 import numpy as np
 import matplotlib.pyplot as plt
 
-readFile=open('C:\\Users\\Jormak\\Downloads\\Sample_data.csv','r')
+# don't need this line really: readFile=open('C:\\Users\\Jormak\\Downloads\\Sample_data.csv','r')
 #sepFile = readFile.read().split('\n')
 
 def graph():

@@ -14,9 +14,16 @@ def get_to_correct_directory():
 
 #grab the csv files
 get_to_correct_directory()
-Snow_Accumulation_data=pd.DataFrame.from_csv('SnowAccumulation.csv')
+Snow_Accumulation_data=pd.DataFrame.from_csv('SnowAccumulation_truncated.csv')
 print 'Snow_Accumulation_data is of type \n', type(Snow_Accumulation_data)
+
 print Snow_Accumulation_data
+
+#Still confused about what is going on here.  I still cannot access a single column
+print 'Snow_Accumulation_data.columns[0] \n', Snow_Accumulation_data.columns[1]
+print 'type(Snow_Accumulation_data.columns[1]) \n', type(Snow_Accumulation_data.columns[1])
+print 'this is the column  \n', Snow_Accumulation_data[Snow_Accumulation_data.columns[1]]
+#print 'will this print correctly ?  \n', Snow_Accumulation_data['Date']
 
 
 
