@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 # don't need this line really: readFile=open('C:\\Users\\Jormak\\Downloads\\Sample_data.csv','r')
 #sepFile = readFile.read().split('\n')
 
+# This is a line graph
+
 def graph():
     xValue, yValue = np.loadtxt('C:\\Users\\Jormak\\Downloads\\Sample_data.csv',delimiter=',', unpack=True)
     print xValue,yValue

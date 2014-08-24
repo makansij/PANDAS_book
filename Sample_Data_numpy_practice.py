@@ -14,8 +14,8 @@ xValue, yValue = np.loadtxt('C:\\Users\\Jormak\\Downloads\\Sample_data.csv', del
 
 # one is the first column, and two is the second column
 # put them into pairs
-one=xValue
-two=yValue
+one = xValue
+two = yValue
 
 import matplotlib.pyplot as plt
 pairs=[]
@@ -24,7 +24,7 @@ for x in one:
   pair=one[x-1],two[x-1]
   pairs.append(pair)
 
-#make pairs into an array to be able to apply numpy stuff
+# make pairs into an array to be able to apply numpy stuff
 pairs=np.array(pairs)
 print type(pairs)
 
@@ -43,6 +43,5 @@ plt.plot(plot1[:,0],plot1[:,1])
 print plot1[0]
 plt.show()
 
-#
 # plt.plot(plot2[0],plot2[1])
 # plt.show()
