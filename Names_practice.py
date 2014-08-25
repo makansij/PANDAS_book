@@ -74,3 +74,4 @@ main()
 
 ### Here I will tackle goal 2
 
+def main2():
