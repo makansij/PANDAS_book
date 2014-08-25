@@ -70,8 +70,30 @@ def create_plots(Females,Males,year):
     plt.title(' Top 5 most common Female names in '+str(year))
     plt.show()
 
-main()
+#main()
 
 ### Here I will tackle goal 2
 
-def main2():
+#def main2():
+
+def concatenate_years_data():
+    '''This function combines all of the dataframes
+    for each year into one dataframe consisting
+    of the births data from all of the years.'''
+    years = np.array(range(1880,2011))  # These are all of the years for which we have data
+    current_directory=os.getcwd()
+    if current_directory!='C:\\Users\\Jormak\\PycharmProjects\\PANDAS_Book\\pydata-book\\ch02\\names':
+        os.chdir('C:\\Users\\Jormak\\PycharmProjects\\PANDAS_Book\\pydata-book\\ch02\\names')
+    all_years = DataFrame()
+    for year in years:
+        one_year = pd.read_csv('yob'+str(year)+'.txt',names = ['name','sex','births'])  #note that read_csv can read .txt files too
+        all_years.append(one_year)
+    names = pd.concat(all_years, ignore_index=True)
+    return all_years
+
+print concatenate_years_data()
+
+
+# This is how you concatenate:  It is on page 34 in the book.
+# Concatenate everything into a single DataFrame
+names = pd.concat(pieces, ignore_index=True)
